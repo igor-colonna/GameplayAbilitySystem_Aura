@@ -3,6 +3,7 @@
 
 #include "Player/AuraPlayerController.h"
 #include "EnhancedInputSubsystems.h"
+#include "EnhancedInputComponent.h"
 
 AAuraPlayerController::AAuraPlayerController()
 {
@@ -27,3 +28,31 @@ void AAuraPlayerController::BeginPlay()
 	SetInputMode(InputModeData);
 
 }
+
+void AAuraPlayerController::SetupInputComponent()
+{
+	Super::SetupInputComponent();
+
+	UEnhancedInputComponent* EnhancedInputComponent = CastChecked<UEnhancedInputComponent>(InputComponent);
+
+	EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AAuraPlayerController::Move);
+}
+
+void AAuraPlayerController::Move(const FInputActionValue& InputActionValue)
+{
+	const FVector2d InputAxisVector = InputActionValue.Get<FVector2d>();
+	const FRotator Rotation = GetControlRotation();
+	const FRotator YawRotation(0.f, Rotation.Yaw, 0.0f);
+
+	const FVector FowardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+	const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
+
+	if (APawn* ControlledPawn = GetPawn<APawn>())
+	{
+		ControlledPawn->AddMovementInput(FowardDirection, InputAxisVector.Y);
+		ControlledPawn->AddMovementInput(RightDirection, InputAxisVector.X);
+	}
+	
+}
+
+
