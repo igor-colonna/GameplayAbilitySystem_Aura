@@ -21,7 +21,8 @@ protected:
 	virtual void BeginPlay() override;
 	
 public:
-	
+	/* Enemy Interface */
 	virtual void HighlightActor() override;
 	virtual void UnHighlightActor() override;
+	/* End Enemy Interface */
 };
