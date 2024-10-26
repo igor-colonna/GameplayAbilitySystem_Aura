@@ -36,6 +36,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="cidr-memory-view://0" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Unreal/UE_5.4/Engine/Source/Runtime/CoreUObject/Public/UObject/CoreNetTypes.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Unreal/UE_5.4/Engine/Source/Runtime/Engine/Public/Net/UnrealNetwork.h" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -151,7 +152,7 @@
       <workItem from="1729791832912" duration="41000" />
       <workItem from="1729792013567" duration="17436000" />
       <workItem from="1729851097204" duration="4267000" />
-      <workItem from="1729903297029" duration="2215000" />
+      <workItem from="1729903297029" duration="2867000" />
     </task>
     <servers />
   </component>
