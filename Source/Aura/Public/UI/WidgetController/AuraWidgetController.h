@@ -3,7 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "AttributeSet.h"
+#include "AbilitySystemComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "AuraWidgetController.generated.h"
 
 class UAttributeSet;
@@ -43,6 +44,8 @@ public:
 	void SetWidgetControllerParams(const FWidgetControllerParams& WidgetControllerParams);
 
 	virtual void BroadcastInitialValues();
+
+	virtual void BindCallbackToDependencies();
 
 protected:
 	UPROPERTY(BlueprintReadOnly, Category="WidgetController")

@@ -6,13 +6,13 @@
 #include "AbilitySystemComponent.h"
 #include "AttributeSet.h"
 #include "AuraAttributeSet.generated.h"
+struct FOnAttributeChangeData;
 
 #define ATTRIBUTE_ACCESSORS(ClassName, PropertyName) \
 	GAMEPLAYATTRIBUTE_PROPERTY_GETTER(ClassName, PropertyName) \
 	GAMEPLAYATTRIBUTE_VALUE_GETTER(PropertyName) \
 	GAMEPLAYATTRIBUTE_VALUE_SETTER(PropertyName) \
 	GAMEPLAYATTRIBUTE_VALUE_INITTER(PropertyName)
-
 /**
  * 
  */
@@ -49,6 +49,5 @@ public:
 	void OnRep_Mana(const FGameplayAttributeData& OldMana ) const;
 	UFUNCTION()
 	void OnRep_MaxMana(const FGameplayAttributeData& OldMaxMana ) const;
-
 	
 };
