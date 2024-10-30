@@ -77,5 +77,7 @@ protected:
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Applied Effects")
 	bool bDestroyOnEffectRemoval = false;
-	
+
+	UPROPERTY(EditAnywhere, Category = "Applied Effects")
+	float ActorLevel = 1.0f;
 };

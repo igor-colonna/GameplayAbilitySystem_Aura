@@ -21,7 +21,7 @@ struct FEffectProperties
 	GENERATED_BODY()
 
 	FEffectProperties(){};
-
+	
 	FGameplayEffectContextHandle EffectContextHandle;
 
 	UPROPERTY()
