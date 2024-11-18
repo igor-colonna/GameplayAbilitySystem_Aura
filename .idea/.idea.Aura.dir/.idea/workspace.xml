@@ -7,9 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e543736-54a4-442d-b3d9-5a3c654bf7c0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/UI/AttributeMenu/WBP_TextValueRow.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/UI/AttributeMenu/WBP_TextValueRow.uasset" afterDir="false" />
-    </list>
+    <list default="true" id="2e543736-54a4-442d-b3d9-5a3c654bf7c0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,7 +176,7 @@
       <workItem from="1731776034507" duration="54000" />
       <workItem from="1731803921676" duration="2524000" />
       <workItem from="1731858285543" duration="12604000" />
-      <workItem from="1731892758784" duration="834000" />
+      <workItem from="1731892758784" duration="1128000" />
     </task>
     <task id="LOCAL-00001" summary="Infinite Effect Application and Removal">
       <option name="closed" value="true" />
