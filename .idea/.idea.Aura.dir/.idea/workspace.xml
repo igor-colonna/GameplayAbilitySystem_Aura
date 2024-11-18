@@ -7,7 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e543736-54a4-442d-b3d9-5a3c654bf7c0" name="Changes" comment="" />
+    <list default="true" id="2e543736-54a4-442d-b3d9-5a3c654bf7c0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Aura.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Aura.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/UI/AttributeMenu/WBP_AttributeMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/UI/AttributeMenu/WBP_AttributeMenu.uasset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,6 +180,8 @@
       <workItem from="1731803921676" duration="2524000" />
       <workItem from="1731858285543" duration="12604000" />
       <workItem from="1731892758784" duration="1128000" />
+      <workItem from="1731899805759" duration="744000" />
+      <workItem from="1731968366305" duration="1572000" />
     </task>
     <task id="LOCAL-00001" summary="Infinite Effect Application and Removal">
       <option name="closed" value="true" />
