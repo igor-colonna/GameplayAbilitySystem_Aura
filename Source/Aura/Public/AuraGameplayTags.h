@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#incluce "GameplayTagContainer.h"
+#include "GameplayTagContainer.h"
 
 /**
  *  AuraGameplayTags
@@ -16,6 +16,8 @@ struct FAuraGameplayTags
 public:
  static const FAuraGameplayTags& Get() {return GameplayTags;}
  static void InitializeNativeGameplayTags();
+
+ FGameplayTag Attribute_Secondary_Armor;
 private:
 
 protected:
