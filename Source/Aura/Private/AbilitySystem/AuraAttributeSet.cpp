@@ -6,13 +6,38 @@
 #include "AbilitySystemBlueprintLibrary.h"
 #include "GameplayEffectExtension.h"
 #include "AbilitySystemComponent.h"
+#include "AuraGameplayTags.h"
 #include "ShaderPrintParameters.h"
+#include "AbilitySystem/Data/AttributeInfo.h"
 #include "GameFramework/Character.h"
 #include "Net/UnrealNetwork.h"
 
 UAuraAttributeSet::UAuraAttributeSet()
 {
+/* Alternative Solution if we use this TMap Later in course
+#define MAPTAGSTOATTRIBUTES(AttributeType, AttributeName) \
+	TagsToAttributes.Add(Attributes_##AttributeType##_##AttributeName, Get##AttributeName##Attribute);
 
+	MAPTAGSTOATTRIBUTES(Primary,Strength)
+	MAPTAGSTOATTRIBUTES(Primary,Intelligence)
+	MAPTAGSTOATTRIBUTES(Primary,Resilience)
+	MAPTAGSTOATTRIBUTES(Primary,Vigor)
+
+	MAPTAGSTOATTRIBUTES(Secondary,Armor)
+	MAPTAGSTOATTRIBUTES(Secondary,ArmorPenetration)
+	MAPTAGSTOATTRIBUTES(Secondary,BlockChance)
+	MAPTAGSTOATTRIBUTES(Secondary,CriticalChance)
+	MAPTAGSTOATTRIBUTES(Secondary,CriticalDamage)
+	MAPTAGSTOATTRIBUTES(Secondary,HealthRegeneration)
+	MAPTAGSTOATTRIBUTES(Secondary,ManaRegeneration)
+	MAPTAGSTOATTRIBUTES(Secondary,MaxHealth)
+	MAPTAGSTOATTRIBUTES(Secondary,MaxMana)
+	MAPTAGSTOATTRIBUTES(Secondary,CriticalHitResistance)
+
+	MAPTAGSTOATTRIBUTES(Vital,Health)
+	MAPTAGSTOATTRIBUTES(Vital,Mana)
+
+#undef MAPTAGSTOATTRIBUTES */
 }
 
 void UAuraAttributeSet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
@@ -102,6 +127,7 @@ void UAuraAttributeSet::PostGameplayEffectExecute(const struct FGameplayEffectMo
 	}
 	
 }
+
 
 void UAuraAttributeSet::OnRep_Health(const FGameplayAttributeData& OldHealth) const
 {

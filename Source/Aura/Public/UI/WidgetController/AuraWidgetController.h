@@ -7,8 +7,10 @@
 #include "UObject/NoExportTypes.h"
 #include "AuraWidgetController.generated.h"
 
+struct FAuraAttributeInfo;
 class UAttributeSet;
 class UAbilitySystemComponent;
+
 
 USTRUCT(BlueprintType)
 struct FWidgetControllerParams
