@@ -7,6 +7,7 @@
 #include "GameplayTagContainer.h"
 #include "AuraPlayerController.generated.h"
 
+class UAuraAbilitySystemComponent;
 struct FGameplayTag;
 class UInputMappingContext;
 class UInputAction;
@@ -46,10 +47,15 @@ private:
 	TScriptInterface<IEnemyInterface> LastActor;
 	TScriptInterface<IEnemyInterface> ThisActor;
 
-	static void AbilityInputTagPressed(FGameplayTag Tag);
-	static void AbilityInputTagReleased(FGameplayTag Tag);
-	static void AbilityInputTagHeld(FGameplayTag Tag);
+	void AbilityInputTagPressed(FGameplayTag Tag);
+	void AbilityInputTagReleased(FGameplayTag Tag);
+	void AbilityInputTagHeld(FGameplayTag Tag);
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Input")
 	TObjectPtr<UAuraInputConfig> InputConfig;
+
+	UPROPERTY()
+	TObjectPtr<UAuraAbilitySystemComponent> AuraAbilitySystemComponent;
+
+	UAuraAbilitySystemComponent* GetASC();
 };
