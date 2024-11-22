@@ -9,7 +9,7 @@
 
 USTRUCT(BlueprintType)
 struct FAuraInputAction
-{
+{ 
 	GENERATED_BODY()
 
 	UPROPERTY(EditDefaultsOnly)
