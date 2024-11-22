@@ -24,7 +24,6 @@ void AAuraPlayerController::PlayerTick(float DeltaTime)
 
 void AAuraPlayerController::CursorTrace()
 {
-	FHitResult CursorHit;
 	GetHitResultUnderCursor(ECC_Visibility, false, CursorHit);
 	if (!CursorHit.bBlockingHit) return;
 
@@ -47,15 +46,8 @@ void AAuraPlayerController::CursorTrace()
 
 	if(ThisActor != LastActor)
 	{
-		if (LastActor != nullptr)
-		{
-			LastActor->UnHighlightActor();
-		}
-
-		if (ThisActor != nullptr)
-		{
-			ThisActor->HighlightActor();
-		}
+		if (LastActor) LastActor->UnHighlightActor();
+		if (ThisActor) ThisActor->HighlightActor();
 	}
 }
 

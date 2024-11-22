@@ -46,6 +46,7 @@ private:
 
 	TScriptInterface<IEnemyInterface> LastActor;
 	TScriptInterface<IEnemyInterface> ThisActor;
+	FHitResult CursorHit;
 
 	void AbilityInputTagPressed(FGameplayTag Tag);
 	void AbilityInputTagReleased(FGameplayTag Tag);
