@@ -51,6 +51,11 @@ void AAuraPlayerController::CursorTrace()
 	}
 }
 
+FHitResult AAuraPlayerController::GetCursorHit() const
+{
+	return CursorHit;
+}
+
 void AAuraPlayerController::AbilityInputTagPressed(FGameplayTag InputTag)
 {
 	//GEngine->AddOnScreenDebugMessage(1, 3, FColor::Red, *InputTag.ToString());

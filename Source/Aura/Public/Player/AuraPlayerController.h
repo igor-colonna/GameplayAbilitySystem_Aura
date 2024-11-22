@@ -27,6 +27,8 @@ class AURA_API AAuraPlayerController : public APlayerController
 public:
 	AAuraPlayerController();
 	virtual void PlayerTick(float DeltaTime) override;
+
+	FHitResult GetCursorHit() const;
 	
 protected:
 	virtual void BeginPlay() override;
@@ -47,7 +49,7 @@ private:
 	TScriptInterface<IEnemyInterface> LastActor;
 	TScriptInterface<IEnemyInterface> ThisActor;
 	FHitResult CursorHit;
-
+	
 	void AbilityInputTagPressed(FGameplayTag Tag);
 	void AbilityInputTagReleased(FGameplayTag Tag);
 	void AbilityInputTagHeld(FGameplayTag Tag);
